@@ -1,2 +1,3 @@
 rootProject.name = 'HomeTasks'
+include 'task1'
 
