@@ -5,11 +5,22 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 
 public class InputWriter {
-    BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
-
-    public int enterArraySize() throws IOException {
-        System.out.println("Введите размер таблицы");
-        String sizeArray = reader.readLine();
-        return Integer.parseInt(sizeArray);
+    private int size;
+    public InputWriter() throws IOException {
+        this.size = enterArraySize();
     }
+    public void setSize() throws IOException {
+        this.size = enterArraySize();
+    }
+    public int getSize() {
+        return size;
+    }
+    public int enterArraySize() throws IOException {
+            BufferedReader reader = new BufferedReader(new InputStreamReader(System.in));
+            System.out.println("Введите размер таблицы");
+            String sizeArray = reader.readLine();
+            return Integer.parseInt(sizeArray);
+        }
+
+
 }

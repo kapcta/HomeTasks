@@ -3,23 +3,13 @@ package ru.milovanov.task1;
 import java.io.IOException;
 
 public class MultipleTable {
-
-    InputWriter writer = new InputWriter();
-    private final int sizeArray = writer.enterArraySize();
-    private final int[][] myArray = new int[sizeArray+1][sizeArray+1];
-
-    // почему он меня просит создавать консруктор,
-    // если не создаю, подчёркивает enterArraySize();
-    public MultipleTable() throws IOException {
+    private final int[][] myArray;
+    public MultipleTable(int size) throws IOException {
+        this.myArray = createTable(size);
     }
-
-    public int getSizeArray() {
-        return sizeArray;
-    }
-
-    public int[][] createTable() {
-        for (int i = 0; i <= sizeArray; i++) {
-            for (int j = 0; j <= sizeArray; j++) {
+    public int[][] createTable(int size) {
+        for (int i = 0; i <= size; i++) {
+            for (int j = 0; j <= size; j++) {
                 if (i == 0) {
                     myArray[i][j] = j;
                 }
