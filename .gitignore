@@ -1,3 +1,4 @@
 # Project exclude paths
 /.gradle/
 /.idea/
+/task1/build/
