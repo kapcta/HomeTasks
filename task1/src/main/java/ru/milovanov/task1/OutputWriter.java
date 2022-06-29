@@ -1,11 +1,9 @@
 package ru.milovanov.task1;
 
-import java.io.IOException;
-
 public class OutputWriter {
     private final int[][] table;
     private final int size;
-    public OutputWriter(int[][] table, int size) throws IOException {
+    public OutputWriter(int[][] table, int size) {
         this.table=table;
         this.size=size;
     }
@@ -15,7 +13,6 @@ public class OutputWriter {
             for (int j = 1; j <= size; j++) {
                 System.out.printf("%4s", table[i][j] + " ");
             }
-            System.out.println("");
         }
     }
 }

@@ -1,11 +1,8 @@
 package ru.milovanov.task1;
 
-import java.io.IOException;
-
 public class MultipleTable {
-    int size;
     private final int[][] myArray;
-    public MultipleTable(int size) throws IOException {
+    public MultipleTable(int size) {
         myArray = new int[size+1][size+1];
     }
     public int[][] createTable(int size) {
