@@ -1,22 +1,21 @@
 package ru.milovanov.task1;
 
 import java.io.IOException;
-import java.util.HashSet;
-import java.util.Set;
 
 public class OutputWriter {
-    //Set<Object> result = new HashSet<Object>();
-    public OutputWriter() throws IOException {
-        ;
+    private final int[][] table;
+    private final int size;
+    public OutputWriter(int[][] table, int size) throws IOException {
+        this.table=table;
+        this.size=size;
     }
-    public void printTable(Object object) {
 
-        /*for (int i = 0; i <= size; i++) {
-            for (int j = 0; j <= size; j++) {
-                System.out.printf("%4s",  object[i][j]+ " ");
+    public void printTable() {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                System.out.printf("%4s", table[i][j] + " ");
             }
-            System.out.println("");*/
-        //result.addAll((Collection<?>) object);
-        System.out.println(object.toString());
+            System.out.println("");
+        }
     }
 }

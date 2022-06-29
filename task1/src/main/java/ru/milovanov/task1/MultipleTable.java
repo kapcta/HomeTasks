@@ -3,17 +3,18 @@ package ru.milovanov.task1;
 import java.io.IOException;
 
 public class MultipleTable {
+    int size;
     private final int[][] myArray;
     public MultipleTable(int size) throws IOException {
-        this.myArray = createTable(size);
+        myArray = new int[size+1][size+1];
     }
     public int[][] createTable(int size) {
-        for (int i = 0; i <= size; i++) {
-            for (int j = 0; j <= size; j++) {
-                if (i == 0) {
+        for (int i = 1; i <= size; i++) {
+            for (int j = 1; j <= size; j++) {
+                if (i == 1) {
                     myArray[i][j] = j;
                 }
-                if (j == 0) {
+                if (j == 1) {
                     myArray[i][j] = i;
                 } else {
                     myArray[i][j] = i * j;
