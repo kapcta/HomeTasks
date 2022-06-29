@@ -13,6 +13,7 @@ public class OutputWriter {
             for (int j = 1; j <= size; j++) {
                 System.out.printf("%4s", table[i][j] + " ");
             }
+            System.out.println("");
         }
     }
 }
